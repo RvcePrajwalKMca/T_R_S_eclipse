@@ -113,9 +113,7 @@ iframe {
 		align-self: stretch;
 	}
 	.cart {
-		position: relative;
 		display: grid;
-		grid-template-columns: 1fr 2fr 1fr;
 		align-items: center;
 		text-align: center;
 		background-color: #ff751a;
@@ -124,11 +122,14 @@ iframe {
 		width: 180px;
 		height: 40px;
 	}
+	.cart>a {
+		font-size: 2vw
+	}
 	.cart button {
 		cursor: pointer;
 		color: #ffffff;
 		font-weight: 600;
-		font-size: 18px;
+		font-size: 2vw;
 		background-color: transparent;
 		border: 0;
 		width: 100%;
@@ -156,7 +157,6 @@ iframe {
 		text-align: center;
 		border-radius: 50% 50% 50% 0;
 	}
-	
 }
 
 @media ( max-width : 571px) {

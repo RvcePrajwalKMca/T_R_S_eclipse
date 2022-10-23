@@ -20,18 +20,19 @@ if (auth != null) {
 	<%@include file="includes/lock_and_top.jsp"%>
 	<h3>&mdash; REGISTER &mdash;</h3>
 	</div>
-	<form action="#" class="sign-up-form" method="post">
+	<form action="user-register" class="sign-up-form" method="post">
 		<h2 class="title">Sign up</h2>
 		<div class="input-field">
-			<i class="fas fa-user"></i> <input type="text" placeholder="Username" />
+			<i class="fas fa-user"></i> <input type="text" name="register-name"
+				placeholder="Username" required>
 		</div>
 		<div class="input-field">
 			<i class="fas fa-envelope"></i> <input type="email"
-				placeholder="Email" />
+				name="register-email" placeholder="Email" required>
 		</div>
 		<div class="input-field">
 			<i class="fas fa-lock"></i> <input type="password"
-				placeholder="Password" />
+				name="register-password" placeholder="Password" required>
 		</div>
 		<input type="submit" class="btn-sup btn solid" value="Sign up" />
 		<div class="content">

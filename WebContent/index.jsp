@@ -57,11 +57,9 @@ if (bucket_list != null) {
 					<%=i.getDescription()%>
 				</p>
 				<div class="cart">
-					<button class="minus">-</button>
 					<a style="text-decoration: none; color: white;"
-						href="add-to-bucket?id=<%=i.getId()%>">Order</a>
-					<button class="plus">+</button>
-					<span class="data-badge">0</span>
+						href="add-to-bucket?id=<%=i.getId()%>">Add to bucket</a> <span
+						class="data-badge">0</span>
 				</div>
 			</div>
 		</div>
@@ -77,7 +75,8 @@ if (bucket_list != null) {
 			class="nav__text" id="mn">Menu</span>
 		</a> <a href="bucket.jsp" class="nav__link"> <span
 			class="material-icons nav__icon"> fastfood </span> <span
-			class="nav__text" id="or">Bucket<span id="hover_badge">&nbsp(<%=(bucket_list != null) ? bucket_list.size() : 0%>)</span></span>
+			class="nav__text" id="or">Bucket<span id="hover_badge">&nbsp(<%=(bucket_list != null) ? bucket_list.size() : 0%>)
+			</span></span>
 		</a>
 		<%
 		if (auth != null) {
@@ -103,6 +102,6 @@ if (bucket_list != null) {
 	</nav>
 	<script src="${pageContext.request.contextPath}/js/brw.js"></script>
 	<script src="${pageContext.request.contextPath}/js/all.js"></script>
-	
+
 </body>
 </html>
