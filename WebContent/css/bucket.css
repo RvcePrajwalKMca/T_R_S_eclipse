@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+.form-group {
+	margin-bottom: 0;
+}
+
+.fas {
+	color: #ff751a;
+}
+
+.chk {
+	padding: 0px;
+}
+
+.chk:not(:hover) {
+	background-color: #ff751a;
+	color: white;
+}
+
+.chk:hover {
+	background-color: #e65c00;
+	color: white;
+}
+
+.btn-danger {
+	padding: 0.5px 9px;
+}
+
+table {
+	font-size: 10px;
+	border: 15px;
+}
+
+th, tr {
+	vertical-align: middle;
+	text-align: center;
+}
+
+#count {
+	max-width: 45px;
+	font-size: 10px;
+	text-align: center;
+	padding: 1px;
+}
+
+.table tbody tr {
+	max-height: 30px;
+}
+
+tr {
+	height: 40px;
+}
+
+.table tbody td {
+	vertical-align: middle;
+	padding: 0px;
+}
+
+.btn-incre, .btn-decre {
+	font-size: 15px;
+	box-shadow: none;
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#price {
+	margin-bottom: 0;
+	vertical-align: middle;
+	/* padding-left: 20px; */
+}
+
+.nav>a {
+	text-decoration: none;
+}
+
+@media ( max-width : 571px) {
+	.price-column {
+		display: none;
+	}
+	.stock-column {
+		display: none;
+	}
+}
