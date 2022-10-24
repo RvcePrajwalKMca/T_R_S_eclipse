@@ -25,16 +25,18 @@ if (auth != null) {
 	</div>
 
 	<div class="container">
-		<form action="enter-item" id="form" enctype="multipart/form-data">
+		<form method="POST" action="enter-items" enctype="multipart/form-data"
+			id="form">
 			<h4>Add item details</h4>
-			<input type="text" id="item-name" placeholder="Item Name" required />
-			<input type="text" id="item-price" placeholder="Item Price" required />
-			<input type="text" id="item-description"
+			<input type="text" name="item-name" placeholder="Item Name" required />
+			<input type="text" name="item-price" placeholder="Item Price" required />
+			<input type="text" name="item-description"
 				placeholder="Item Description" required /> <input type="number"
-				id="item_stock" placeholder="Item stock" required />
+				name="item-stock" placeholder="Item stock" required />
 			<h5>Select image</h5>
-			<input type="file" id="item-image" placeholder="Item Image"
+			<input type="file" id="file" name="file" placeholder="Item Image"
 				accept="image/*" required /> <input type="submit" value="Submit" />
+
 		</form>
 	</div>
 

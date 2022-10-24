@@ -110,6 +110,24 @@ public class ItemDao {
 			e.printStackTrace();
 		}
 		return sum;
-		
 	}
+	
+	public boolean insertItem(Item model) {
+		boolean result = false;
+		try {
+			query = "insert into items (name,price,description,stock,image) values(?,?,?,?,?)";
+			pst = this.con.prepareStatement(query);
+			pst.setString(1, model.getName());
+			pst.setDouble(2, model.getPrice());
+			pst.setString(3, model.getDescription());
+			pst.setInt(4, model.getStock());
+			pst.setString(5, model.getImage());
+			pst.executeUpdate();
+			result = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
 }
