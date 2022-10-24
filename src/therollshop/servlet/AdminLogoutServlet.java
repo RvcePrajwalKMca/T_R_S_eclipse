@@ -9,19 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/log-out")
-public class LogoutServlet extends HttpServlet {
+@WebServlet("/admin-log-out")
+public class AdminLogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try (PrintWriter out = response.getWriter()) {
-			if (request.getSession().getAttribute("auth") != null) {
-				request.getSession().removeAttribute("auth");
-				response.sendRedirect("login.jsp");
-			}else {
-				response.sendRedirect("login.jsp");
+			if (request.getSession().getAttribute("authadmin") != null) {
+				request.getSession().removeAttribute("authadmin");
+				response.sendRedirect("admin.jsp");
+			} else {
+				response.sendRedirect("admin.jsp");
 			}
 		}
 	}
+
 }

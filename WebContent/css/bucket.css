@@ -9,7 +9,7 @@
 }
 
 .chk {
-	padding: 0px;
+	padding: 0 10px;
 }
 
 .chk:not(:hover) {
@@ -71,7 +71,6 @@ tr {
 #price {
 	margin-bottom: 0;
 	vertical-align: middle;
-	/* padding-left: 20px; */
 }
 
 .nav>a {
@@ -84,5 +83,9 @@ tr {
 	}
 	.stock-column {
 		display: none;
+	}
+	#count {
+		height: 18px;
+		margin-top: 6px;
 	}
 }

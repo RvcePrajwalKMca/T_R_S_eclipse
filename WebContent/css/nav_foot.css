@@ -31,3 +31,15 @@
 	background-color: #e65c00;
 	cursor: pointer;
 }
+.nav>a{
+	text-decoration:none;
+	
+}
+@media ( max-width : 571px) {
+	.nav {
+		height: 60px;
+	}
+	.nav__link {
+		font-size: 18px;
+	}
+}

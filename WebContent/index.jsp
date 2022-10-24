@@ -23,12 +23,12 @@ if (bucket_list != null) {
 	bucketItem = iDao.getBucketItems(bucket_list);
 	request.setAttribute("bucket-list", bucket_list);
 }
+response.setIntHeader("refresh", 10);
 %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet" />
+<%@include file="includes/head.jsp"%>
 <title>Browse menu</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/nav_foot.css" />
@@ -53,7 +53,7 @@ if (bucket_list != null) {
 						Rs.
 						<%=dcf.format(i.getPrice())%></h5>
 				</div>
-				<p>
+				<p title=<%=i.getDescription()%>>
 					<%=i.getDescription()%>
 				</p>
 				<div class="cart">
@@ -69,7 +69,7 @@ if (bucket_list != null) {
 		%>
 
 	</div>
-	<nav class="nav">
+	<div class="nav">
 		<a href="index.jsp" class="nav__link nav__link__active"> <span
 			class="material-icons nav__icon"> restaurant_menu </span> <span
 			class="nav__text" id="mn">Menu</span>
@@ -99,7 +99,7 @@ if (bucket_list != null) {
 		}
 		%>
 
-	</nav>
+	</div>
 	<script src="${pageContext.request.contextPath}/js/brw.js"></script>
 	<script src="${pageContext.request.contextPath}/js/all.js"></script>
 

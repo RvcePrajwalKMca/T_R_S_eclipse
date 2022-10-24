@@ -45,7 +45,7 @@ iframe {
 		padding: 0 10px 30px 10px;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-		grid-gap: 20px 40px;
+		grid-gap: 20px 38px;
 	}
 	.heading {
 		position: fixed;
@@ -123,7 +123,7 @@ iframe {
 		height: 40px;
 	}
 	.cart>a {
-		font-size: 2vw
+		font-size: 18px
 	}
 	.cart button {
 		cursor: pointer;
@@ -160,12 +160,6 @@ iframe {
 }
 
 @media ( max-width : 571px) {
-	.nav {
-		height: 60px;
-	}
-	.nav__link {
-		font-size: 18px;
-	}
 	body {
 		margin: 140px 0 60px 0;
 	}
@@ -201,6 +195,9 @@ iframe {
 	.cart button {
 		font-size: 3.3vw;
 	}
+	.cart>a {
+		font-size: 3.5vw;
+	}
 	.details-sub>h5 {
 		font-size: 4.5vw;
 	}
@@ -234,6 +231,9 @@ iframe {
 	}
 	.cart button {
 		font-size: 3.9vw;
+	}
+	.cart>a {
+		font-size: 14px;
 	}
 	.details-sub>h5 {
 		font-size: 6vw;

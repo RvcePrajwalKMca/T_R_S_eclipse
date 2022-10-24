@@ -1,0 +1,5 @@
+git init
+git remote add origin https://github.com/RvcePrajwalKMca/T_R_S_eclipse.git
+git add .
+git commit -a -m ""
+git push -u origin --all

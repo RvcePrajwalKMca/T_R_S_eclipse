@@ -2,9 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@page import="therollshop.model.*"%>
 <%
-User auth = (User) request.getSession().getAttribute("auth");
+Admin auth = (Admin) request.getSession().getAttribute("authadmin");
 if (auth != null) {
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("additems.jsp");
 }
 %>
 <!DOCTYPE html>
@@ -18,31 +18,20 @@ if (auth != null) {
 </head>
 <body>
 	<%@include file="includes/lock_and_top.jsp"%>
-	<h3>&mdash; LOGIN &mdash;</h3>
+	<h3>&mdash; ADMIN LOGIN &mdash;</h3>
 	</div>
-	<form action="user-login" method="post" class="sign-in-form">
+	<form action="admin-login" method="post" class="sign-in-form">
 		<h2 class="title">Sign in</h2>
 		<div class="input-field">
-			<i class="fas fa-user"></i> <input type="text" name="login-email"
-				placeholder="Username(email)" required>
+			<i class="fas fa-user"></i> <input type="text" name="admin-id"
+				placeholder="Admin Id" required>
 		</div>
 		<div class="input-field">
 			<i class="fas fa-lock"></i> <input type="password"
-				name="login-password" placeholder="Password" required>
+				name="admin-password" placeholder="Password" required>
 		</div>
 		<input type="submit" value="Login" class="btn-lin btn solid" id="lgn" />
-		<div class="content">
-			<h3>New here ?</h3>
-			<p style="font-size: 16px">
-				<a class="login"
-					href="${pageContext.request.contextPath}/register.jsp">Register
-					now</a> and enjoy delicious rolls from THE ROLL SHOP
-			</p>
-
-		</div>
 	</form>
-
-
 	<%@include file="includes/footer.jsp"%>
 </body>
 </html>
